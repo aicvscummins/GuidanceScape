@@ -1,0 +1,29 @@
+body
+{
+	background-image:url(https://i.pinimg.com/originals/d1/33/fd/d133fd867fd743cb48b80377173bc77a.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+.balance
+{
+	 position:relative;
+	 
+	 
+	 margin: 0 auto 200px;
+	 padding:65px;
+	 text-align:center;
+	 font-size:27px;
+}
+.anchor
+{
+		 text-align:center;
+		  font-size:20px;
+		  background:#ccffeb;
+		  margin: 0 auto 80px;
+	     padding:20px;
+		   max-width: 300px;
+}
+marquee{
+font-size:30px;
+}

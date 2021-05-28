@@ -1,0 +1,38 @@
+body
+{
+	background-image:url(https://thumbs.dreamstime.com/b/wood-background-wallpaper-hd-123273980.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+.form
+{
+	 position:relative;
+	 background:#922B21 ;
+	
+	 max-width: 360px;
+	 margin: 0 auto 100px;
+	 padding:45px;
+	 text-align:center;
+}
+.form input
+{
+
+	background:#D0D3D4 ;
+	width:100%;
+	border:0;
+	margin:0 0 15px;
+	padding: 15px;
+	box-sizzing:border-box;
+	font-size:20px;
+}
+
+.login
+{
+	width: 360 px;
+	padding:10% 0 0;
+	margin: auto;
+}
+marquee{
+font-size:30px;
+}
