@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+
+	<script type="text/javascript" src="formValidation.js"></script>
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Girassol&family=Lobster&display=swap');
+		.layout
+		{
+			width : 500px;
+			margin : auto;
+			padding: 10px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		h1
+		{
+			color : #483d8b;
+			text-align: center;
+		}
+		.user
+		{
+			border-radius : 8px;
+			border-color: white;
+			width: 490px;
+			background-color: thistle;
+		}
+		.submit
+		{
+			border-radius : 12px;
+			background-color: #483d8b;
+			border-color: #483d8b;
+			height: 30px;
+			width : 70px;
+			color : white;
+			margin-left: 217px;
+		}
+		#head
+		{
+		padding : 10px;
+		font-weight: bold;
+		background-color: #C5C7E0;
+		margin: 10px;
+		}
+
+		#title
+		{
+			font-family: 'Amatic SC', cursive;
+			font-size : 60px;
+		}
+
+		.pages
+		{
+			margin-left: 100px;	
+		}
+		#foot
+		{
+			background-color: #C5C7E0;
+			padding: 10px;
+			text-align: center;
+			margin : 10px;
+		}
+		span
+		{
+			color : #F0567D;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id = "head">
+		<label id = "title"><a href="index.html" style="text-decoration: none;color:black;">The Reviewer</a></label>
+		<label class="pages"><a href="electronics.html" style="text-decoration: none;color:black;">Electronics</a></label>
+		<label class="pages"><a href="beautyandhealthcare.html" style="text-decoration: none;color:black;">Beauty and Healthcare</a></label>
+		<label class="pages"><a href="chocolates.html" style="text-decoration: none;color:black;">Chocolates</a></label>
+		<label class="pages"><a href="beverages.html" style="text-decoration: none;color:black;">Beverages</a></label>
+	</div>
+
+	<div>
+
+    	<div class = "layout">
+
+    		<h1>Contact Us</h1>
+   
+    		<!-- email -->
+    		<label>Please enter your E-mail ID below : </label>
+    		<span id="emailv"></span>
+    		<br/><br/>
+    		<input class = "user" type="text" id = "email" onblur="checkmail()" required>
+    		
+
+    		<br/>
+    		<br/>
+
+    		<!-- phone -->
+    		<label>Enter your phone number : </label>
+    		<span id = "phonev"></span>
+    		<br/><br/>
+    		<input class = "user" type="text" id = "phone" onblur="checkphone()" required>
+    		
+
+    		<br/>
+    		<br/>
+
+    		<!-- query -->
+    		<label>Tell us what your query/isuue is : </label>
+    		<span id="queryv"></span>
+    		<br/><br/>
+    		<textarea class = "user" id = "query" rows="5" cols="50" onblur="checkquery()"></textarea>
+    		<br/>
+    		<br/>
+
+    		<button class="submit" onclick="check2();">
+    			Submit
+    		</button>
+    	
+    	</div>
+
+    </div>
+
+    <div id="foot">
+		<a href="contactus.html" style="text-decoration: none;color:black;">Contact us</a> 
+            <br/>
+            Customer help
+            <br/>
+            Privacy policy
+            <br/>
+            Cookies
+            <br/>
+            Careers
+	</div>
+
+</body>
+</html>
