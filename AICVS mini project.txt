@@ -1,0 +1,355 @@
+#include <iostream>
+#include<string>
+using namespace std;
+//class dictionary;
+class node
+{
+   string word,meaning;
+   node *left,*right;
+   public:
+   friend class dictionary;
+   node()
+   {
+     left=NULL;
+     right=NULL;
+ }
+ node(string word, string meaning)
+ {
+  this->word=word;
+  this->meaning=meaning;
+  left=NULL;
+  right=NULL;
+ }
+};
+
+class dictionary
+{
+ node *root;
+ public:
+ dictionary()
+ {
+  root=NULL;
+ }
+ void create();
+ void inorder_rec(node *rnode);
+ void postorder_rec(node *rnode);
+ void inorder()
+ {
+  inorder_rec(root);
+ }
+ void postorder();
+
+ bool insert(string word,string meaning);
+ int search(string key);
+ void deletee(string w);
+
+};
+ int dictionary::search(string key)
+ {
+  node *tmp=root;
+  int count;
+  if(tmp==NULL)
+  {
+   return -1;
+  }
+  if(root->word==key)
+   return 1;
+  while(tmp!=NULL)
+  {
+     if((tmp->word)>key)
+     {
+        tmp=tmp->left;
+        count++;
+     }
+     else if((tmp->word)<key)
+     {
+       tmp=tmp->right;
+       count++;
+     }
+     else if(tmp->word==key)
+     {
+       return ++count;
+     }
+ }
+ return -1;
+}
+
+  void dictionary::postorder()
+   {
+     postorder_rec(root);
+   }
+  void dictionary::postorder_rec(node *rnode)
+   {
+     if(rnode)
+     {
+        postorder_rec(rnode->right);
+        cout<<" "<<rnode->word<<" : "<<rnode->meaning<<endl;
+        postorder_rec(rnode->left);
+      }
+   }
+   
+  void dictionary::create()
+  {
+     int n;
+     string wordI,meaningI;
+     cout<<"\nHow many Word(s) you want to insert ?:\n";
+     cin>>n;
+     for(int i=0;i<n;i++)
+     {
+         cout<<"\nEnter Word: ";
+         cin>>wordI;
+         cout<<"\nEnter Meaning: ";
+         cin>>meaningI;
+         insert(wordI,meaningI);
+     }
+}
+
+  void dictionary::inorder_rec(node *rnode)
+  {
+     if(rnode)
+      {
+         inorder_rec(rnode->left);
+         cout<<" "<<rnode->word<<" : "<<rnode->meaning<<endl;
+         inorder_rec(rnode->right);
+      }
+   }
+   
+bool dictionary::insert(string word, string meaning)
+{
+   node *p=new node(word, meaning);
+   if(root==NULL)
+   {
+      root=p;
+      return true;
+   }
+   node *cur=root;
+   node *par=root;
+   while(cur!=NULL) //traversal
+   {
+     if(word>cur->word)
+     {
+         par=cur;
+         cur=cur->right;
+     }
+     
+     else if(word<cur->word)
+     {
+        par=cur;
+        cur=cur->left;
+     }
+     else
+     {
+        cout<<"\nWord is already in the dictionary.";
+        return false;
+     }
+   }
+   
+    if(word>par->word) //insertion of node
+    {
+       par->right=p;
+        return true;
+    }
+    else
+    {
+      par->left=p;
+      return true;
+    }
+ }
+ 
+ 
+ void dictionary :: deletee(string w)
+ {
+		 node *prev,*cur;
+		 prev=NULL;
+		 cur=root;
+		 while(cur!=NULL && ((cur->word.compare(w)>0) || (cur->word.compare(w)<0)))
+		 {
+			 prev=cur;
+			 if(cur->word.compare(w)>0)
+				 cur=cur->left;
+			 else
+				 cur=cur->right;
+		 }
+		 if(cur==NULL)
+			 cout<<w<<"does not exist in the dictionary";
+		 
+		 else
+		 {	 
+		 
+		  //cur is the node to be deleted
+			 //CASE 1 : when cur is leaf node
+		   if(cur->left==NULL && cur->right==NULL)
+			 {
+				if(prev==NULL || cur==root) //when there is only 1 node in the tree.....which itself is the leaf node
+				{
+					root=NULL;
+				    cout<<w<<" is deleted";
+				}
+				 else
+				 {
+					 if(prev->word.compare(w)>0)
+					 {
+						 cout<<w<<" is deleted";
+						 prev->left=NULL;
+						 cout<<w<<" is deleted"; 
+					 }
+					 else
+					 {
+						 prev->right=NULL;
+						 cout<<w<<" is deleted"; 
+					 }
+				 }		    	
+			 }
+		 
+		   //CASE 2 : when cur is having only left subtree
+		 else if(cur->left!=NULL && cur->right==NULL)
+		 {
+    		 if(prev==NULL) //when root is having only left subtree ......and root is to be deleted
+    		 {
+    			 root=cur->left; //it would point to next left element 
+    			 cur->left=NULL;
+    			 cout<<w<<" is deleted";
+    		 }
+    		 else  //root is not the node to be deleted ....any other node with only left child
+    		 {
+    			 if(prev->word.compare(w)>0) //when the node to be deleted .....is towards the left of prev
+    			 {
+    			    prev->left = cur->left;
+    			    cur->left=NULL;
+    			    cout<<w<<" is deleted"; 
+    			 }
+    			 else  //when the node to be deleted ..... is towards the right of prev
+    			 {
+    				 prev->right=cur->left;
+    				 cur->left = NULL;
+    				 cout<<w<<" is deleted"; 
+    			 }
+    		 }
+		 }
+		 
+		//CASE 3 : when cur is having only right subtree
+		 else if(cur->left==NULL && cur->right!=NULL)
+		 {
+			 if(prev==NULL) //when root is having only right subtree ......and root is to be deleted
+    		 {
+    			 root=cur->right ;
+    			 cur->right=NULL;
+    			 cout<<w<<" is deleted";
+    		 } 
+			 
+			 else  //root is not the node to be deleted ....any other node with only right child
+    		 {
+    			 if(prev->word.compare(w)>0) //when the node to be deleted .....is towards the left of prev
+    			 {
+    			    prev->left = cur->right;
+    			    cur->right=NULL;
+    			    cout<<w<<" is deleted"; 
+    			 }
+    			 else  //when the node to be deleted ..... is towards the right of prev
+    			 {
+    				 prev->right=cur->right;
+    				 cur->right = NULL;
+    				cout<<w<<" is deleted"; 
+    			 }
+    		 }
+		 }
+		 
+		//CASE 4 : when cur is to to be deleted .....and cur is having both children....ONE LEFT - EXTREME RIGHT
+		 else if(cur->left!=NULL && cur->right!=NULL) 
+		 {
+			 node *temp;
+			 temp = cur->left;  //ONE LEFT     temp =150
+			 while(temp->right!=NULL)//EXTREME RIGHT
+			 {
+				 temp=temp->right;
+			 }
+			 temp->right = cur->right; // entire right portion of cur ....would be attached to right of cur..
+			                        //thereby is is the case of left subtree
+			 cur->right = NULL;
+			 if(prev==NULL)  //if root has to be deleted
+			 {
+				 root = cur->left;
+				 cur->left = NULL; //cur is deleted
+				 cout<<w<<" is deleted"; 
+			 }
+			 else  //when cur is not the roor node
+			 {
+				 if(prev->word.compare(w)>0)
+				 {
+					prev->right = cur->left;
+					cur->left = NULL;
+					cout<<w<<" is deleted"; 
+				 }
+			 }
+			 
+		 }   
+		}
+			 
+	 }
+
+
+int main() 
+{
+   string word,w;
+   dictionary months;
+   int ch,comparisons;
+   do
+   {
+       cout<<"\n\tEnter 1. to insert a word in dictionary";
+       cout<<"\n\tEnter 2. to display all words in dictionary in Ascending order";
+       cout<<"\n\tEnter 3. to display all words in dictionary in Descending order";
+       cout<<"\n\tEnter 4. to search a word in dictionary";
+       cout<<"\n\tEnter 5. to delete a word from dictionary";
+       cout<<"\n\tEnter 6. to exit";
+       cout<<"\n\t-----------------------------------------------------------------------------------------------";
+       cout<<"\n\tEnter your choice!\n";
+       cin>>ch;
+       switch(ch)
+       {
+           case 1:
+                   months.create();
+                   break;
+                   
+            case 2:
+                   cout<<"Words in dictionary in Ascending order\n";
+                   months.inorder();
+                   break;
+                   
+            case 3:
+                    cout<<"\nWords in dictionary in Descending order:\n";
+                    months.postorder();
+                    break;
+                    
+            case 4:
+                     cout<<"\nEnter word to search: ";
+                     cin>>word;
+                     comparisons=months.search(word);
+                     if(comparisons==-1)
+                     {
+                       cout<<"\nNo such found word!";
+                     }
+                     else
+                     {
+                        cout<<"\n "<<word<<" found in dictionary";
+                     }
+                     break;
+            case 5:
+                    cout<<"\n\tEnter the word that you want to delete from dictionary\n";
+                    cin>>w;
+                    months.deletee(w);
+                    cout<<"\n***********************************************";
+                    cout<<"\nWords in dictionary in Ascending order\n";
+                    months.inorder();
+                    break;
+            case 6:
+                    cout<<"\nThank-you, you may leave now!";
+                    break;
+                    
+            default :
+                      cout<<"\nInvalid Choice,kindly re-enter a valid choice!";
+                      break;
+                     
+       }
+   }while(ch!=6);
+ return 0;
+}
