@@ -14,4 +14,4 @@ input validation and make use of alerts. Once submitted,
 the user is automatically redirected to the previous page.
 I have used box model for our website and maintain a homogenous nature throughout
 
-I have used HTML, CSS and JAVASCRIPT in this folder
+I have used HTML, CSS and JAVASCRIPT in this project
