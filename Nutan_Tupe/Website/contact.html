@@ -1,0 +1,138 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        * {
+            background-size: cover;
+            font-family: sans-serif;
+            background-color: black;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        h1 {
+            background-color: rebeccapurple;
+            height: 70px;
+            text-align: center;
+            padding-top: 17px;
+
+        }
+
+        input[type=submit],
+        input[type=reset] {
+            background-color: lightseagreen;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            color: black;
+            margin-left: 100px;
+        }
+
+        input[type=submit]:hover {
+            background-color: rebeccapurple;
+
+        }
+
+        input[type=text] {
+            color: white;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+            color: lightseagreen;
+        }
+
+        @media screen and (max-width: 850px) and (min-width: 360px){
+            * {
+                font-family: sans-serif;
+                background-size: cover;
+                 width: 100%;
+                 margin:4px 4px;
+            }
+            h1 {
+                background-color: rebeccapurple;
+                height: 80px;
+                text-align: center;
+                /* padding-top: 15px; */
+                width: 100%;
+            }
+            input[type=text] {
+            width: 50%;
+            color: white;
+            }
+            input[type=submit],
+            input[type=reset] {
+                background-color: lightseagreen;
+                border: none;
+                color: white;
+                padding: 6px 12px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+                color: black;
+            }
+        }
+
+        @media screen and (max-width:360px) {
+            * {
+                font-family: sans-serif;
+                background-size: cover;
+                width: 100%;
+                margin: 4px 4px;
+            }
+
+            h1 {
+                background-color: rebeccapurple;
+                height: 35px;
+                text-align: center;
+                padding-top: 12px;
+                width: 100%;
+                
+
+            }
+
+            input[type=submit],
+            input[type=reset] {
+                background-color: lightseagreen;
+                border: none;
+                color: white;
+                padding: 6px 12px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+                color: black;
+                margin-left: 10px;
+            }
+            input[type=text]{
+                size: 50px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+    <h1>Contact Form</h1>
+    <form action="/action_page.php">
+        <label for="fname">Full Name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="Enter your full name" size="22"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" placeholder="Enter your email address" size="22"><br><br>
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="sub" name="sub" placeholder="Message subject" size="22"><br><br>
+        <label for="message">Message</label><br>
+        <input type="text" id="message" name="message" style="height:120px; width:500px; "><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
