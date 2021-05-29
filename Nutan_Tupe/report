@@ -1,0 +1,198 @@
+         Student’s Report Card System
+
+Introduction - Student report card system project in C++ is a simple project built without the use of graphics. In this project, users can perform typical report card related functions like adding a new student record and displaying, modifying, editing and deleting it.
+
+Motivation - To build a report card system where user can build a report card of students. Both students and teachers can access the projects
+
+Objective - This program named- “Report Card Management System”, aims at helping teachers and students to work with report cards in an organized manner. It makes provisions for adding, deleting, displaying and various other functions on student records. All the records are saved to data files.
+The program has three access levels- Teacher, Student and Public. The Teacher function (accessed by a password) has administrator rights over the records and can manipulate the records in any way. The Student and Public are restricted to the viewership of the records and statistical analysis.
+
+Approach - It is a very simple project which works on 3 header files 
+1.#inclulde<iostream>
+2.#include<fstream>
+3.#include<iomanip>
+File handling has been used for the effective implementation of all the typical features of this project .
+I have started the program with a class student in which I have declared some variables and made some functions like void getdata() , void showdata() ,etc.
+Some functions are declared globally like void write_student() – here teacher can enter students record, void display_all() – here it display all the students record ,void display_sp(int) – here it display an individual students record using roll no of the student  like this there are many function which do various tasks.
+I learned how to use file handling – how to open/close a file ,write / read things form the file ,what are ifstream ,  ofstream ,inFile ,outFile etc.
+Link - https://github.com/Nutan2305/reportcard.github.io
+
+Experiment/result – 
+                 STUDENT
+           REPORT CARD PROJECT
+
+           MADE BY : NUTAN TUPE
+
+
+
+
+        MAIN MENU
+
+        01. RESULT MENU
+
+        02. ENTRY/EDIT MENU
+
+        03. EXIT
+
+        Please Select Your Option (1-3)2
+Only teachers can access please enter your password : 123
+
+
+
+        ENTRY MENU
+
+        1.CREATE STUDENT RECORD
+
+        2.DISPLAY ALL STUDENTS RECORDS
+
+        3.SEARCH STUDENT RECORD
+
+        4.MODIFY STUDENT RECORD
+
+        5.DELETE STUDENT RECORD
+
+        6.BACK TO MAIN MENU
+
+        Please Enter Your Choice (1-6)1
+Only teachers can access please enter your password : 123
+
+
+
+        ENTRY MENU
+
+        1.CREATE STUDENT RECORD
+
+
+Only teachers can access please enter your password : 123
+
+
+
+        ENTRY MENU
+
+        1.CREATE STUDENT RECORD
+
+        2.DISPLAY ALL STUDENTS RECORDS
+
+Only teachers can access please enter your password : 123
+
+
+
+        ENTRY MENU
+
+        1.CREATE STUDENT RECORD
+
+
+Enter The roll number of student 1
+
+
+Enter The Name of student Nutan
+
+Enter The marks in physics out of 100 : 60
+
+Enter The marks in chemistry out of 100 : 50
+
+Enter The marks in maths out of 100 : 64
+
+Enter The marks in english out of 100 : 68
+
+Enter The marks in computer science out of 100 : 49
+
+
+Student record Has Been Created
+        01. RESULT MENU
+
+        02. ENTRY/EDIT MENU
+
+        03. EXIT
+
+        Please Select Your Option (1-3)2
+Only teachers can access please enter your password : 123
+
+
+
+        ENTRY MENU
+
+        1.CREATE STUDENT RECORD
+
+        2.DISPLAY ALL STUDENTS RECORDS
+
+        3.SEARCH STUDENT RECORD
+
+        4.MODIFY STUDENT RECORD
+
+        5.DELETE STUDENT RECORD
+
+        6.BACK TO MAIN MENU
+
+        Please Enter Your Choice (1-6)1
+Only teachers can access please enter your password : 123
+
+
+        ENTRY MENU
+
+        1.CREATE STUDENT RECORD
+
+
+Enter The roll number of student 2
+
+
+Enter The Name of student Sudha
+
+Enter The marks in physics out of 100 : 79
+
+Enter The marks in chemistry out of 100 : 50
+
+Enter The marks in maths out of 100 : 69
+
+Enter The marks in english out of 100 : 78
+
+Enter The marks in computer science out of 100 : 70
+
+
+Student record Has Been Created
+        01. RESULT MENU
+
+        02. ENTRY/EDIT MENU
+
+        03. EXIT
+
+        Please Select Your Option (1-3)1
+        RESULT MENU
+
+
+        1. Class Result
+
+        2. Student Report Card
+
+        3. Back to Main Menu 
+Enter Choice (1/2/3)?1
+
+ALL STUDENTS RESULT
+
+==========================================================
+R.No    Name     P   C   M   E  CS    %age Grade
+==========================================================
+1       Nutan    60  50  64  68  49   58.20     B
+2       Sudha    79  50  69  78  70   69.20     A
+
+Reference –https://www.codewithc.com/student-report-card-system-project-in-c/#:~:text=Student%20report%20card%20system%20project%20in%20C%2B%2B%20is,has%20been%20effectively%20used%20to%20perform%20all%20these.
+
+
+
+This is my Second Project about Aurangabad Tourism
+
+
+     Aurangabad Tourism
+            
+This is a Basic website containing a Home page about Aurangabad Tourism. Here I have use HTML and CSS. This Website also contains a Sign-up Page and a contact form.
+Also tried to make it responsive.
+
+Motivation behind this was to nothing but I wanted to try and implement what I have learned in HTML and CSS.  Also, I wanted to learn how a website is hosted using GitHub.
+Reference - https://www.w3schools.com/html/
+            https://www.w3schools.com/css/
+
+Link for website -https://nutan2305.github.io/abad.github.io/
+Link for GitHub repository - https://github.com/Nutan2305/abad.github.io
+ 
+
+
