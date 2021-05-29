@@ -1,0 +1,17 @@
+I have made a product review website, 
+where users can check reviews of products before buying them.
+We currently have added 4 categories of products, each category
+having 4 products. We have added a link to a website where the user
+can buy the product.
+
+They can submit their own reviews for a product in the form of rating 
+and text description.
+They can also contact us in case of queries or issues over mail 
+as well as phone.
+
+Both the form for rating submission and contacting us have 
+input validation and make use of alerts. Once submitted, 
+the user is automatically redirected to the previous page.
+We have used box model for our website and maintain a homogenous nature throughout
+
+I have used HTML, CSS and JAVASCRIPT in this folder

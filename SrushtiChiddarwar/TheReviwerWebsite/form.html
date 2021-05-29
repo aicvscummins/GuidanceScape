@@ -1,0 +1,163 @@
+<html>
+
+<head>
+	<!-- bootstrap libraries for star rating -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
+
+	<title>Submit Your Review</title>
+
+	<script type="text/javascript" src="formValidation.js"></script>
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Girassol&family=Lobster&display=swap');
+		.form
+		{
+			padding: 10px;
+			font-size: 15px;
+			font-family: Arial, Helvetica, sans-serif;
+			padding: 10px;
+			color : black;
+		}
+		.personalia
+		{
+			float: left;
+		}
+		.submit
+		{
+			background-color: #DAB7BF;
+			border-color: #DAB7BF;
+			border-style: round;
+			width: 100px;
+			height: 30px;
+			border-radius: 12px;
+		}
+		input, #review
+		{
+			border-color: #B9D9EB;
+			border-radius: 12px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		span
+		{
+			color : #483d8b;
+		}
+		#head
+	{
+		padding : 10px;
+		font-weight: bold;
+		background-color: #C5C7E0;
+		margin: 10px;
+	}
+
+	#title
+	{
+		font-family: 'Amatic SC', cursive;
+		font-size : 60px;
+	}
+
+	.pages
+	{
+		margin-left: 100px;	
+	}
+
+	#foot
+	{
+		background-color: #C5C7E0;
+		padding: 10px;
+		text-align: center;
+		margin : 10px;
+		clear: left;
+	}
+	span
+	{
+		color : #F0567D;
+	}
+	</style>
+
+</head>
+
+<body>
+
+	<div id = "head">
+		<label id = "title"><a href="index.html" style="text-decoration: none;color:black;">The Reviewer</a></label>
+		<label class="pages"><a href="electronics.html" style="text-decoration: none;color:black;">Electronics</a></label>
+		<label class="pages"><a href="beautyandhealthcare.html" style="text-decoration: none;color:black;">Beauty and Healthcare</a></label>
+		<label class="pages"><a href="chocolates.html" style="text-decoration: none;color:black;">Chocolates</a></label>
+		<label class="pages"><a href="beverages.html" style="text-decoration: none;color:black;">Beverages</a></label>
+	</div>
+
+	<div class = "form">
+
+    <div class = "personalia">
+   
+    		<!-- first name -->
+    		<label>Enter your first name : </label>
+    		<label style="color:#F0567D;">*</label>
+    		<input type="text" id = "fname" onblur="checkfname()" required>
+    		<span id="fnamev"></span>
+
+    		<br/>
+    		<br/>
+
+    		<!-- last name -->
+    		<label>Enter your last name : </label>
+    		<label style="color:#F0567D;">*</label>
+    		<input type="text" id = "lname" onblur="checklname()" required>
+    		<span id = "lnamev"></span>
+
+    		<br/>
+    		<br/>
+
+    		<!-- rating -->
+    		<label>Select your rating : </label>
+    		<label style="color:#F0567D;">*</label>
+    		<br/>
+    		<input id="input-1" name="input-1" class="rating rating-loading" value="1" data-min="0" data-max="5" data-step="0.5" data-size="xs">
+
+    		<br/>
+    		<br/>
+
+    		<!-- review -->
+    		<label>Tell us what your experience with this product was : </label>
+    		<br/>
+    		<textarea id = "review" rows="5" cols="50"></textarea>
+
+    		<br/>
+    		<br/>
+
+    		<label style="color : #F0567D;">* : Necessary field.</label>
+
+    		<br/>
+
+    		<button class="submit" onclick="check();">
+    			Submit
+    		</button>
+    	
+    </div>
+
+    <div>
+    	<img src="write.jpg" height="400px" width="500px" align="right">
+    </div>
+
+    </div>
+
+    <div style="width: 10px;clear: left;"></div>
+
+    <div id="foot">
+		<a href="contactus.html" style="text-decoration: none;color:black;">Contact us</a> 
+            <br/>
+            Customer help
+            <br/>
+            Privacy policy
+            <br/>
+            Cookies
+            <br/>
+            Careers
+	</div>
+
+</body>
+
+</html>

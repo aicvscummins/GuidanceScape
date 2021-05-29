@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Girassol&family=Lobster&display=swap');
+
+#head
+{
+	padding : 10px;
+	font-weight: bold;
+	background-color: #C5C7E0;
+	margin: 10px;
+}
+
+#title
+{
+	font-family: 'Amatic SC', cursive;
+	font-size : 60px;
+}
+
+.pages
+{
+	margin-left: 100px;	
+}
+
+#foot
+{
+	background-color: #C5C7E0;
+	padding: 10px;
+	text-align: center;
+	margin : 10px;
+}
+
+#header
+{
+	height : 300px;
+	margin : 10px;
+	background-position: center;
+	background-size: cover;
+	padding : 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.product
+{
+	height : 150px;
+	margin : 10px;
+	padding : 10px;
+	border-style: dashed;
+	border-color: #FBDAE6;
+	clear : left;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.productimage
+{
+	width : 100px;
+	height : 100px;
+	background-position: center;
+	background-size: cover;
+	float : left;
+}
+
+.productname
+{
+	width : 200px;
+	height : 100px;
+	margin-left: 20px;
+	float : left;
+	color : black;
+}
+
+.productreviews
+{
+	width : 850px;
+	height : 110px;
+	margin-left: 350px;
+	color : black;
+}
+
+.ratings 
+{
+	width : 100px;
+	height : 15px;
+}
+
+.nameofperson
+{
+	width : 750px;
+	height : 20px;
+}
+
+.review
+{
+	width : 750px;
+	height : 40px;
+}
+
+.buyhere
+{
+	background-color: #DAB7BF;
+	border-color: #DAB7BF;
+	width : 100px;
+	height : 25px;
+	border-radius : 12px;
+}
+
+.addreview
+{
+	background-color: #DAB7BF;
+	border-color: #DAB7BF;
+	width : 150px;
+	height : 25px;
+	float : right;
+	border-radius : 12px;
+}
+
+.productlink, .formlink
+{
+	color : black;
+	text-decoration: none;
+}

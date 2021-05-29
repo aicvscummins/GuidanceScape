@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Reviewer</title>
+        <style>
+            /* Style The Dropdown Button */
+            .dropbtn {
+              background-color: #746cc0;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;
+              cursor: pointer;
+              margin-top: 50px;
+            }
+            
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+              position: relative;
+              display: inline-block;
+            }
+            
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 140px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+            }
+            
+            /* Links inside the dropdown */
+            .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+            }
+            
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {background-color: #dcd0ff}
+            
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+              display: block;
+            }
+            
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown:hover .dropbtn {
+              background-color: #d8b2d1;
+            }
+            </style>
+    </head>
+    <body>
+        
+        <div align="center" style="height: 600px; background-image : url(TheReviewer.jpg);background-position: center;background-size: cover;">
+          <div class="dropdown" style = "margin-top: 250px;">
+                <button class="dropbtn">Tour a category</button>
+                <div class="dropdown-content">
+                  <a href="electronics.html">Electronics</a>
+                  <a href="beautyandhealthcare.html">Beauty and health</a>
+                  <a href="chocolates.html">Chocolates</a>
+                  <a href="beverages.html">Beverages</a>
+                </div>
+              </div>
+        </div>
+        <div  style="height: 100px;bottom: 0%; background: #C5C7E0; text-align : center ;padding: 15px;font-size: 115%;">
+            <a href="contactus.html" style="color : black;text-decoration: none;">Contact us</a> 
+            <br/>
+            Customer help
+            <br/>
+            Privacy policy
+            <br/>
+            Cookies
+            <br/>
+            Careers
+        </div>
+    </body>
+</html>
